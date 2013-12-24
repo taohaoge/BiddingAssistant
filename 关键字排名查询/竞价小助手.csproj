@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{9870E930-BA12-4DC8-9F13-40A5864707A5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>关键字排名查询</RootNamespace>
+    <AssemblyName>竞价小助手</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Administrator.TB93IXSH0VCMKCC\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <ApplicationIcon>bin\Debug\ico.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <RunSourceAnalysis>False</RunSourceAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaiduRank">
+      <HintPath>..\..\..\BaiduRank\BaiduRank\BaiduRank\bin\Debug\BaiduRank.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="关键字排名查询, Version=1.0.4802.21101, Culture=neutral, PublicKeyToken=null" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addgroup.cs" />
+    <Compile Include="Addgroup.Designer.cs">
+      <DependentUpon>Addgroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addkeywords.cs" />
+    <Compile Include="Addkeywords.Designer.cs">
+      <DependentUpon>Addkeywords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addweb.cs" />
+    <Compile Include="Addweb.Designer.cs">
+      <DependentUpon>Addweb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleBufferListView.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MD5.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMail.cs" />
+    <Compile Include="SendMail.Designer.cs">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="suggest.cs" />
+    <Compile Include="suggest.Designer.cs">
+      <DependentUpon>suggest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addgroup.resx">
+      <DependentUpon>Addgroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addkeywords.resx">
+      <DependentUpon>Addkeywords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addweb.resx">
+      <DependentUpon>Addweb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMail.resx">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suggest.resx">
+      <DependentUpon>suggest.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
